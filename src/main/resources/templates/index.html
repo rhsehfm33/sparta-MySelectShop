@@ -13,16 +13,22 @@
 </head>
 <body>
 <div class="header" style="position:relative;">
-    <!--header 추가 부분-->
-    <div id="header-title-select-shop">
-        Select Shop
-    </div>
-    <div th:if="${username != '' }">
+    <!--headr 추가 부분-->
+    <div id="login-true" style="display: none">
         <div id="header-title-login-user">
-            <span th:text="${username}"></span> 님의
+            <div id="username"></div> 님의
         </div>
+        <div id="header-title-select-shop">
+            Select Shop
+        </div>
+        <a id="login-text" href="javascript:logout()">
+            로그아웃
+        </a>
     </div>
-    <div th:unless="${username != ''}">
+    <div id="login-false" >
+        <div id="header-title-select-shop">
+            Select Shop
+        </div>
         <a id="sign-text" href="/api/user/signup">
             회원가입
         </a>
