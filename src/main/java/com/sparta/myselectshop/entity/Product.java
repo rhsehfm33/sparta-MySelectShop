@@ -13,7 +13,7 @@ import java.util.List;
 @Getter
 @Entity // DB 테이블 역할을 합니다.
 @NoArgsConstructor
-public class Product extends Timestamped{
+public class Product extends Timestamped {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // ID가 자동으로 생성 및 증가합니다.
